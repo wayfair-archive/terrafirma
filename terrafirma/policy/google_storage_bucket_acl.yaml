@@ -1,0 +1,32 @@
+google_storage_bucket_acl:
+  - issue: SB_1
+    checktype: static
+    name: Bucket readable by all users
+    fields:
+      role_entity:
+        - "READER:allUsers"
+        - "READER:allAuthenticatedUsers"
+    level: WARN
+  - issue: SB_2
+    checktype: static
+    name: Bucket writable by all users.
+    fields:
+      role_entity:
+        - "WRITER:allUsers"
+        - "WRITER:allAuthenticatedUsers"
+    level: FATAL
+  - issue: SB_3
+    checktype: static
+    name: Bucket readable by all users
+    fields:
+      role_entity:
+        - "READER:allAuthenticatedUsers"
+    level: WARN
+  - issue: SB_4
+    checktype: static
+    name: Bucket writable by all users.
+    fields:
+      role_entity:
+        - "WRITER:allAuthenticatedUsers"
+    level: FATAL
+

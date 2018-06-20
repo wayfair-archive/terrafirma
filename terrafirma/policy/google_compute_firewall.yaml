@@ -1,0 +1,47 @@
+google_compute_firewall:
+  - issue: FW_1
+    checktype: static
+    name: Source range open to Internet
+    fields:
+      source_ranges:
+        - 0.0.0.0/0
+    level: WARN
+ 
+  - issue: FW_2
+    checktype: static
+    name: SSH Open
+    fields:
+      allow.ports:
+         - "22"
+      allow.protocol:
+        - tcp
+    level: INFO
+
+  - issue: FW_3
+    checktype: dynamic
+    name: Overly permissive rule, greater than slash 8
+    function: cidr_comparison
+    test: GE
+    fields:
+      source_ranges:
+         - "8"
+    level: WARN
+
+  - issue: FW_4
+    checktype: static
+    name: Use of default network in firewall
+    fields:
+      network:
+        - "default"
+    level: WARN
+
+  - issue: FW_5
+    checktype: dynamic
+    name: Port range exceeds 100 ports
+    function: range_comparison
+    test: GE
+    fields:
+      allow.ports:
+        - 100
+    level: WARN 
+

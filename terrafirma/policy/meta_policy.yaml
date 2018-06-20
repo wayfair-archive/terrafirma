@@ -1,0 +1,8 @@
+meta_policy:
+  -  issue: MI_1
+     name: SSH open to the Internet
+     checks: 
+       - FW_1 
+       - FW_2
+     logic: AND
+     level: FATAL

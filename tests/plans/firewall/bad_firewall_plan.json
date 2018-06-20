@@ -1,0 +1,23 @@
+{
+    "destroy": false,
+    "google_compute_firewall.default": {
+        "allow.#": "1",
+        "allow.805075243.ports.#": "2",
+        "allow.805075243.ports.0": "443",
+        "allow.805075243.ports.1": "22",
+        "allow.805075243.protocol": "tcp",
+        "destination_ranges.#": "",
+        "destroy": false,
+        "destroy_tainted": false,
+        "id": "",
+        "name": "example_fw_rule",
+        "network": "default",
+        "priority": "1000",
+        "project": "",
+        "self_link": "",
+        "source_ranges.#": "1",
+        "source_ranges.1080289494": "0.0.0.0/0",
+        "target_tags.#": "1",
+        "target_tags.51671333": "test-node"
+    }
+}

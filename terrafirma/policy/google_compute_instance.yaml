@@ -1,0 +1,38 @@
+google_compute_instance:
+  - issue: CE_1
+    checktype: static
+    name: Old version of CentOS
+    fields:
+      boot_disk.initialize_params.image:
+        - "centos-cloud/centos-6"
+    level: FATAL
+  - issue: CE_2
+    checktype: dynamic
+    name: Check instance meets naming convention
+    function: instance_name_check
+    test: ISBAD
+    fields:
+       name: 
+         - "bad"
+    level: WARN
+  - issue: CE_3
+    checktype: static
+    name: Use of default network in instance
+    fields: 
+      network_interface.network:
+       - "default"
+    level: WARN
+  - issue: CE_4
+    checktype: static
+    name: Compute service account has cloud platform access
+    fields:
+      service_account.scopes:
+        - "https://www.googleapis.com/auth/cloud-platform"
+    level: FATAL
+  - issue: CE_5
+    checktype: static
+    name: Compute service account has read-write to compute engine
+    fields:
+      service_account.scopes:
+        - "https://www.googleapis.com/auth/compute"
+    level: WARN
