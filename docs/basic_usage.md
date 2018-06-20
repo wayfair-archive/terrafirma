@@ -11,7 +11,7 @@ $ terraform plan -out=my_plan
 $ tfjson my_plan | python terrafirma.py
 ```
 
-### Original Hasicorp Language plan:
+### Original Hashicorp Language plan:
 
 ```
 provider "google" {
