@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Terrafirma requires [tf2json](https://github.com/philips/tfjson).  Terraform does not support JSON output (see [PR:3170](https://github.com/hashicorp/terraform/pull/3170)). 
+Terrafirma requires [tfjson](https://github.com/philips/tfjson).  Terraform does not support JSON output (see [PR:3170](https://github.com/hashicorp/terraform/pull/3170)). 
 
 ```
 go get github.com/philips/tfjson
