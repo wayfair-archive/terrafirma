@@ -13,7 +13,7 @@ $ tfjson my_plan | python terrafirma.py
 
 ### Original Hasicorp Language plan:
 
-````
+```
 provider "google" {
   region      = "us-east1"
   project     = "my-project"
