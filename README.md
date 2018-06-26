@@ -16,11 +16,13 @@ go get github.com/philips/tfjson
 
 ### Installing
 
-build and install terrafirma as well as it's requirements:
+build and install terrafirma as well as it's requirements. One way is to use wheels and virtualenv:
 
 ```
-python setup.py bdist_wheel
+virtualenv -p python3 virtualenv
+source virtualenv/bin/activate
 pip install -r requirements.txt
+python setup.py build bdist_wheel
 pip install terrafirma --find-links=dist
 ```
 
