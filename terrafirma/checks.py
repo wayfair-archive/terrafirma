@@ -82,8 +82,9 @@ def locate_resource(resource, index, issue, check_type):
         if key_filtered in fields:
             if check_type == "dynamic":
                 matched_fields.append(key)
-            if resource[key] == str(issue[index][key_filter(key)][0]):
-                matched_fields.append(key)
+            for field_value in issue[index][key_filter(key)]:
+                if resource[key] == (str(field_value)):
+                    matched_fields.append(key)
 
     if check_type == "dynamic":
         return matched_fields, matched_fields[-1] if matched_fields else None
