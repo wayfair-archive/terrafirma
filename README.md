@@ -39,4 +39,4 @@ python setup.py test
 ### Usage
 *   See [Basic Usage](docs/basic_usage.md) for examples of how to use Terrafirma
 *   See [Writing Checks](docs/writing_checks.md) for help understanding the check types and implementing new checks
-*   See [Tests](docs/tests.md) for running terrafirma unit tests to ensure it's functionality correctly.
+*   See [Tests](docs/tests.md) for running terrafirma unit tests to ensure it's functioning correctly.
