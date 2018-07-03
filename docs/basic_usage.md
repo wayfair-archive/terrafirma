@@ -8,7 +8,7 @@ Save your Terraform plan to a file and then convert it to JSON and pipe it to te
 
 ``` 
 $ terraform plan -out=my_plan
-$ tfjson my_plan | python terrafirma.py
+$ tfjson my_plan | python terrafirma
 ```
 
 ### Original Hashicorp Language plan:
