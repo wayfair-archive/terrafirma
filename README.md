@@ -14,6 +14,18 @@ Terrafirma requires [tfjson](https://github.com/philips/tfjson).  Terraform does
 go get github.com/philips/tfjson
 ```
 
+If you encounter errors with newer versions of go, try the following:
+
+```
+rm -rf "${GOPATH}/src/github.com/philips/tfjson/vendor"
+rm -rf "${GOPATH}/src/github.com/philips/Gopkg.lock"
+cd "${GOPATH}/src/github.com/philips/"
+dep ensure
+go install ./...
+```
+
+The package has half-populated dependencies, which [dep does not like](https://github.com/golang/dep/issues/883) and a hardcoded Gopkg.lock.
+
 ### Installing
 
 build and install terrafirma as well as it's requirements. One way is to use wheels and virtualenv:
